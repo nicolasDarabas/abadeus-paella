@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!-- usesCleartextTraffic: a API local roda em http:// (sem certificado) -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,17 +19,62 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PaellaABADEUS">
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.PaellaABADEUS"
+        tools:targetApi="31">
+
+        <!-- SPLASH: primeira tela do app -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:theme="@style/Theme.PaellaABADEUS.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.auth.RegistroActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Visao do COMPRADOR -->
+        <activity android:name=".ui.comprador.CompradorActivity" />
+        <activity
+            android:name=".ui.comprador.CheckoutActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Detalhe do pedido (comprador e administrador) -->
+        <activity android:name=".ui.pedido.PedidoDetalheActivity" />
+
+        <!-- Visao do ADMINISTRADOR -->
+        <activity
+            android:name=".ui.admin.AdminActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- Visao do VOLUNTARIO (somente retirada) -->
+        <activity android:name=".ui.admin.VoluntarioActivity" />
+
+        <!-- Compartilhamento dos relatorios CSV -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.arquivos"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/arquivos_compartilhados" />
+        </provider>
+
+        <!-- Tela de leitura do QR Code em pe (retrato) -->
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
     </application>
 
 </manifest>

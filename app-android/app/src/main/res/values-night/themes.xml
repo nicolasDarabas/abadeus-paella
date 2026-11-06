@@ -1,7 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.PaellaABADEUS" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+    <!-- No modo escuro o app mantem as cores da marca -->
+    <style name="Base.Theme.PaellaABADEUS" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/terracota</item>
+        <item name="colorOnPrimary">@color/branco</item>
+        <item name="colorPrimaryContainer">@color/terracota_claro</item>
+        <item name="colorOnPrimaryContainer">@color/terracota_escuro</item>
+        <item name="colorSecondary">@color/oliva</item>
+        <item name="colorOnSecondary">@color/branco</item>
+        <item name="colorSecondaryContainer">@color/oliva_claro</item>
+        <item name="colorOnSecondaryContainer">@color/grafite</item>
+        <item name="colorTertiary">@color/acafrao</item>
+        <item name="colorOnTertiary">@color/grafite</item>
+        <item name="colorTertiaryContainer">@color/acafrao_claro</item>
+        <item name="colorSurface">@color/areia</item>
+        <item name="colorOnSurface">@color/grafite</item>
+        <item name="colorOnSurfaceVariant">@color/cinza</item>
+        <item name="colorSurfaceContainer">@color/areia_escura</item>
+        <item name="colorSurfaceContainerLow">@color/branco</item>
+        <item name="colorOutline">@color/areia_escura</item>
+        <item name="colorError">@color/erro</item>
+        <item name="android:colorBackground">@color/areia</item>
+        <item name="android:windowBackground">@color/areia</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Fonte padrao dos textos: Nunito (titulos usam Baloo 2 pelos estilos Texto.*) -->
+        <item name="android:textAppearance">@style/Texto.Base</item>
+        <item name="textAppearanceBodyLarge">@style/Texto.Base.Grande</item>
+        <item name="textAppearanceBodyMedium">@style/Texto.Base</item>
+        <item name="textAppearanceLabelLarge">@style/Texto.Base.Rotulo</item>
+
+        <item name="materialButtonStyle">@style/Widget.Abadeus.Botao</item>
+        <item name="materialCardViewStyle">@style/Widget.Abadeus.Card</item>
+        <item name="textInputStyle">@style/Widget.Abadeus.Campo</item>
+        <item name="toolbarStyle">@style/Widget.Abadeus.Toolbar</item>
     </style>
+
 </resources>
