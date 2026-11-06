@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paleta oficial ABADEUS (ver Manual de Marca) -->
+<resources>
+    <color name="acafrao">#E3A21A</color>
+    <color name="acafrao_claro">#FBEBC4</color>
+    <color name="acafrao_brilho">#F4C95D</color>
+    <color name="oliva">#5E7330</color>
+    <color name="oliva_claro">#E4E9D3</color>
+    <color name="terracota">#B9472A</color>
+    <color name="terracota_escuro">#8E3420</color>
+    <color name="terracota_claro">#F6DCD3</color>
+    <color name="areia">#F7EEDF</color>
+    <color name="areia_escura">#EADBC2</color>
+    <color name="grafite">#2B2622</color>
+    <color name="cinza">#6F665E</color>
+    <color name="branco">#FFFFFF</color>
+    <color name="erro">#B3261E</color>
+
+    <!-- usados pelo template -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

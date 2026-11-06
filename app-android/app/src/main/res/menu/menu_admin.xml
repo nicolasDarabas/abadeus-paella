@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/aba_painel" android:icon="@drawable/ic_painel" android:title="@string/menu_painel" />
+    <item android:id="@+id/aba_pedidos_admin" android:icon="@drawable/ic_recibo" android:title="@string/menu_todos_pedidos" />
+    <item android:id="@+id/aba_retirada" android:icon="@drawable/ic_qr" android:title="@string/menu_retirada" />
+</menu>

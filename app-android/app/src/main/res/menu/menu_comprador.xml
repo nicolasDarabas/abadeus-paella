@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/aba_cardapio" android:icon="@drawable/ic_cardapio" android:title="@string/menu_cardapio" />
+    <item android:id="@+id/aba_pedidos" android:icon="@drawable/ic_recibo" android:title="@string/menu_pedidos" />
+    <item android:id="@+id/aba_perfil" android:icon="@drawable/ic_pessoa" android:title="@string/menu_perfil" />
+</menu>

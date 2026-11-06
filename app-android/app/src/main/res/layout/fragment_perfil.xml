@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_topo"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="24dp"
+            android:paddingBottom="28dp">
+
+            <ImageView
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:contentDescription="@null"
+                android:src="@drawable/logo_abadeus" />
+
+            <TextView
+                android:id="@+id/perfilNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAppearance="@style/Texto.Titulo" />
+
+            <TextView
+                android:id="@+id/perfilEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Texto.Corpo"
+                android:textColor="@color/terracota_escuro" />
+
+            <TextView
+                android:id="@+id/perfilTipo"
+                style="@style/Etiqueta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/branco" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margem_pequena">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Como funciona"
+                    android:textAppearance="@style/Texto.Subtitulo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="1.  Escolha sua paella no Cardápio.\n2.  Pague com Pix, cartão ou dinheiro no caixa.\n3.  Depois do pagamento, o QR Code aparece em Meus pedidos.\n4.  No dia do evento, mostre o QR Code na retirada.\n\nCada QR Code vale para uma única retirada."
+                    android:textAppearance="@style/Texto.Corpo" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margem_pequena"
+            android:layout_marginEnd="@dimen/margem_pequena">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A causa"
+                    android:textAppearance="@style/Texto.Subtitulo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Toda a renda da Paella Beneficente é revertida para os projetos da ABADEUS. Uma panela, muitas mãos."
+                    android:textAppearance="@style/Texto.Corpo" />
+
+                <TextView
+                    android:id="@+id/perfilServidor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textAppearance="@style/Texto.Rotulo"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Avisos recebidos (e-mails simulados) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAvisos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margem_pequena"
+            android:layout_marginTop="@dimen/margem_pequena"
+            android:layout_marginEnd="@dimen/margem_pequena"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Avisos recebidos"
+                    android:textAppearance="@style/Texto.Subtitulo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cópia dos e-mails enviados para você"
+                    android:textAppearance="@style/Texto.Rotulo"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/listaAvisos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoSair"
+            style="@style/Widget.Abadeus.Botao.Contorno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margem"
+            android:text="@string/sair"
+            app:icon="@drawable/ic_sair"
+            app:iconTint="@color/terracota" />
+    </LinearLayout>
+</ScrollView>

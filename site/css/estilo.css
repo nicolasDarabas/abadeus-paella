@@ -1,0 +1,260 @@
+/* =========================================================
+   Paella Beneficente ABADEUS - site institucional
+   Identidade visual: ver Manual da Marca ABADEUS
+   ========================================================= */
+
+@font-face { font-family: "Baloo 2"; src: url("../fontes/baloo2-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Baloo 2"; src: url("../fontes/baloo2-800.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+@font-face { font-family: "Nunito"; src: url("../fontes/nunito-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Nunito"; src: url("../fontes/nunito-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+
+:root {
+  --acafrao: #E3A21A;
+  --acafrao-claro: #FBEBC4;
+  --acafrao-brilho: #F4C95D;
+  --terracota: #B9472A;
+  --terracota-escuro: #8E3420;
+  --terracota-claro: #F6DCD3;
+  --oliva: #5E7330;
+  --oliva-claro: #E4E9D3;
+  --areia: #F7EEDF;
+  --areia-escura: #EADBC2;
+  --grafite: #2B2622;
+  --cinza: #6F665E;
+  --branco: #fff;
+
+  --titulo: "Baloo 2", system-ui, sans-serif;
+  --texto: "Nunito", system-ui, sans-serif;
+  --raio: 22px;
+  --sombra: 0 10px 30px rgba(43, 38, 34, .10);
+  --largura: 1140px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { font: 400 17px/1.6 var(--texto); color: var(--grafite); background: var(--areia); -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--titulo); line-height: 1.1; }
+h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 800; margin-bottom: 14px; }
+h3 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+:focus-visible { outline: 3px solid var(--acafrao); outline-offset: 3px; border-radius: 6px; }
+
+.container { width: 100%; max-width: var(--largura); margin: 0 auto; padding: 0 20px; }
+
+/* ---------- Botoes ---------- */
+.botao {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 52px; padding: 0 26px; border: 2px solid var(--terracota); border-radius: 14px;
+  background: var(--terracota); color: var(--branco); text-decoration: none; cursor: pointer;
+  font: 700 17px var(--titulo); letter-spacing: .02em; transition: transform .15s, background .15s;
+}
+.botao:hover { background: var(--terracota-escuro); border-color: var(--terracota-escuro); transform: translateY(-1px); }
+.botao:disabled { opacity: .6; cursor: wait; transform: none; }
+.botao--contorno { background: transparent; color: var(--terracota); }
+.botao--contorno:hover { background: var(--terracota); color: var(--branco); }
+.botao--pequeno { min-height: 42px; padding: 0 18px; font-size: 15px; }
+.botao--largo { width: 100%; }
+.botao-texto { background: none; border: 0; color: var(--terracota); font: 700 15px var(--texto); cursor: pointer; text-decoration: underline; }
+
+.etiqueta {
+  display: inline-block; padding: 4px 14px; border-radius: 99px;
+  background: var(--acafrao-claro); color: var(--terracota-escuro); font: 700 14px var(--texto);
+}
+.etiqueta--oliva { background: var(--oliva-claro); color: var(--oliva); }
+.etiqueta--terracota { background: var(--terracota-claro); color: var(--terracota-escuro); }
+.etiqueta--grafite { background: var(--areia-escura); color: var(--grafite); }
+
+/* ---------- Cabecalho ---------- */
+.cabecalho { position: sticky; top: 0; z-index: 10; background: rgba(247, 238, 223, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--areia-escura); }
+.cabecalho__linha { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.marca__simbolo { width: 46px; height: 46px; }
+.marca__texto { display: flex; flex-direction: column; line-height: 1; }
+.marca__texto strong { font: 800 24px var(--titulo); letter-spacing: .02em; }
+.marca__texto small { font: 700 13px var(--titulo); color: var(--terracota); }
+.menu { display: flex; align-items: center; gap: 26px; }
+.menu a:not(.botao) { text-decoration: none; font-weight: 700; font-size: 16px; }
+.menu a:not(.botao):hover { color: var(--terracota); }
+.menu-botao { display: none; width: 44px; height: 44px; border: 0; background: none; cursor: pointer; flex-direction: column; justify-content: center; gap: 5px; padding: 10px; }
+.menu-botao span { height: 3px; background: var(--grafite); border-radius: 3px; }
+
+/* ---------- Hero ---------- */
+.hero { background: var(--acafrao); border-radius: 0 0 48px 48px; padding: 64px 0 80px; overflow: hidden; }
+.hero__grade { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: center; }
+.hero h1 { font-size: clamp(46px, 7vw, 86px); font-weight: 800; margin: 16px 0 18px; }
+.hero h1 span { color: var(--branco); text-shadow: 0 3px 0 rgba(142, 52, 32, .25); }
+.hero__sub { font-size: 20px; max-width: 520px; }
+.hero__info { list-style: none; margin: 24px 0 30px; display: grid; gap: 8px; font-weight: 700; }
+.hero__info li { display: flex; gap: 10px; align-items: center; }
+.icone { width: 34px; height: 34px; border-radius: 10px; background: rgba(255, 255, 255, .45); display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.icone svg { width: 20px; height: 20px; fill: var(--terracota); }
+.hero__botoes { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero .botao--contorno { border-color: var(--grafite); color: var(--grafite); }
+.hero .botao--contorno:hover { background: var(--grafite); color: var(--branco); }
+.hero__arte { position: relative; display: flex; justify-content: center; align-items: center; min-height: 380px; }
+.hero__circulo { position: absolute; width: min(460px, 90%); aspect-ratio: 1; border-radius: 50%; background: var(--acafrao-brilho); opacity: .55; }
+.hero__simbolo { position: relative; width: min(420px, 85%); filter: drop-shadow(0 18px 30px rgba(142, 52, 32, .35)); animation: girar 60s linear infinite; }
+@keyframes girar { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .hero__simbolo { animation: none; } html { scroll-behavior: auto; } }
+
+/* ---------- Secoes ---------- */
+.secao { padding: 90px 0; }
+.secao--areia-escura { background: var(--areia-escura); }
+.secao--terracota { background: var(--terracota); color: var(--branco); }
+.secao__sobre { display: inline-block; font: 700 14px var(--texto); letter-spacing: .16em; text-transform: uppercase; color: var(--terracota); margin-bottom: 10px; }
+.secao__sobre--claro { color: var(--acafrao-claro); }
+.secao__intro { max-width: 720px; font-size: 19px; color: var(--cinza); margin-bottom: 40px; }
+.claro { color: var(--branco); }
+.claro-suave { color: var(--terracota-claro); }
+
+.cartoes-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.cartao { background: var(--branco); border-radius: var(--raio); padding: 30px; box-shadow: var(--sombra); }
+.cartao p { color: var(--cinza); }
+.cartao__icone { width: 60px; height: 60px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 18px; }
+.cartao__icone svg { width: 32px; height: 32px; fill: var(--terracota); }
+.cartao__icone--oliva svg { fill: var(--oliva); }
+.cartao__icone--acafrao { background: var(--acafrao-claro); }
+.cartao__icone--terracota { background: var(--terracota-claro); }
+.cartao__icone--oliva { background: var(--oliva-claro); }
+
+.passos { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: p; }
+.passos li { background: var(--areia); border-radius: var(--raio); padding: 28px 24px; position: relative; }
+.passos p { color: var(--cinza); font-size: 16px; }
+.passos__num { display: inline-flex; width: 48px; height: 48px; border-radius: 50%; background: var(--terracota); color: var(--branco); align-items: center; justify-content: center; font: 800 24px var(--titulo); margin-bottom: 14px; }
+
+/* ---------- Cardapio ---------- */
+.produtos { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 22px; }
+.produto { background: var(--branco); border-radius: var(--raio); padding: 26px; box-shadow: var(--sombra); display: flex; flex-direction: column; gap: 8px; }
+.produto__topo { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.produto__selo { width: 62px; height: 62px; border-radius: 50%; background: var(--acafrao-claro); display: flex; align-items: center; justify-content: center; }
+.produto__selo img { width: 44px; }
+.produto h3 { font-size: 20px; margin-top: 6px; }
+.produto p { color: var(--cinza); font-size: 15px; flex: 1; }
+.produto__preco { font: 800 28px var(--titulo); color: var(--terracota); }
+.produto__estoque { font-weight: 700; font-size: 14px; color: var(--oliva); }
+.produto__estoque--pouco { color: var(--terracota); }
+.produto--esgotado { opacity: .55; }
+.produto--carregando { min-height: 240px; background: linear-gradient(90deg, #fff 0%, var(--areia-escura) 50%, #fff 100%); background-size: 200% 100%; animation: brilho 1.4s infinite; }
+@keyframes brilho { to { background-position: -200% 0; } }
+.cardapio__rodape { margin-top: 30px; text-align: center; color: var(--cinza); }
+.aviso { background: var(--terracota-claro); color: var(--terracota-escuro); border-radius: 14px; padding: 14px 18px; font-weight: 700; margin-bottom: 24px; }
+
+/* ---------- Meus pedidos ---------- */
+.pedidos-grade { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+.painel { background: var(--branco); color: var(--grafite); border-radius: var(--raio); padding: 32px; box-shadow: 0 20px 50px rgba(0, 0, 0, .18); }
+.painel label { display: block; font-weight: 700; font-size: 15px; margin: 14px 0 6px; }
+.painel input { width: 100%; height: 52px; border: 2px solid var(--areia-escura); border-radius: 14px; padding: 0 16px; font: 400 17px var(--texto); background: var(--areia); }
+.painel input:focus { border-color: var(--terracota); outline: none; background: var(--branco); }
+.painel .botao { margin-top: 20px; }
+.painel__dica { text-align: center; color: var(--cinza); font-size: 14px; margin-top: 14px; }
+.erro { color: var(--terracota); font-weight: 700; font-size: 15px; min-height: 22px; margin-top: 10px; }
+.painel__topo { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--areia-escura); padding-bottom: 14px; margin-bottom: 14px; }
+.painel__topo strong { display: block; font: 800 22px var(--titulo); }
+.painel__topo small { color: var(--cinza); }
+.lista-pedidos { display: grid; gap: 14px; max-height: 620px; overflow-y: auto; }
+.pedido { border: 2px solid var(--areia-escura); border-radius: 16px; padding: 16px; }
+.pedido__topo { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+.pedido__numero { font: 800 20px var(--titulo); }
+.pedido__itens { color: var(--cinza); font-size: 15px; margin: 6px 0; }
+.pedido__rodape { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--cinza); }
+.pedido__total { font: 800 20px var(--titulo); color: var(--terracota); }
+.pedido__qr { margin-top: 14px; display: flex; gap: 16px; align-items: center; background: var(--areia); border-radius: 14px; padding: 12px; }
+.pedido__qr img { width: 130px; height: 130px; border: 3px dashed var(--acafrao); border-radius: 12px; background: #fff; padding: 4px; }
+.pedido__qr code { font-size: 15px; font-weight: 700; }
+.pedido__qr--retirado img { opacity: .25; }
+.vazio { color: var(--cinza); text-align: center; padding: 30px 0; }
+
+/* ---------- App ---------- */
+.app-grade { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.app-telas { position: relative; height: 560px; }
+.app-tela { position: absolute; width: 250px; border-radius: 32px; box-shadow: 0 25px 50px rgba(43, 38, 34, .25); }
+.app-tela--1 { left: 8%; top: 0; transform: rotate(-5deg); }
+.app-tela--2 { left: 44%; top: 50px; transform: rotate(5deg); }
+.lista-check { list-style: none; margin: 20px 0 30px; display: grid; gap: 12px; }
+.lista-check li { padding-left: 36px; position: relative; }
+.lista-check li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--oliva); color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.pequeno { font-size: 14px; color: var(--cinza); margin-top: 10px; }
+
+/* ---------- Rodape ---------- */
+.rodape { background: var(--grafite); color: var(--areia); padding: 50px 0 24px; }
+.rodape__grade { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; }
+.marca--rodape .marca__texto strong { color: var(--branco); }
+.marca--rodape .marca__texto small { color: var(--acafrao); }
+.rodape__slogan { font: 700 22px var(--titulo); color: var(--acafrao-claro); font-style: italic; }
+.rodape__links { display: flex; gap: 20px; flex-wrap: wrap; }
+.rodape__links a { text-decoration: none; color: var(--areia-escura); }
+.rodape__links a:hover { color: var(--acafrao); }
+.rodape__copy { text-align: center; color: var(--cinza); font-size: 14px; margin-top: 34px; padding: 0 20px; }
+
+/* ---------- Quantidade no cardapio ---------- */
+.qtd { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+.qtd button { width: 42px; height: 42px; border-radius: 12px; border: 0; background: var(--acafrao-claro); color: var(--terracota-escuro); font: 800 22px var(--titulo); cursor: pointer; }
+.qtd button:hover:not(:disabled) { background: var(--acafrao-brilho); }
+.qtd button:disabled { opacity: .4; cursor: not-allowed; }
+.qtd span { min-width: 22px; text-align: center; font: 800 20px var(--titulo); }
+
+/* ---------- Carrinho flutuante ---------- */
+.carrinho { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 20; width: min(560px, calc(100% - 32px)); display: flex; align-items: center; justify-content: space-between; gap: 14px; background: var(--grafite); color: var(--branco); border-radius: 18px; padding: 12px 12px 12px 22px; box-shadow: 0 16px 40px rgba(0, 0, 0, .3); }
+.carrinho small { display: block; color: var(--acafrao-brilho); font-weight: 700; }
+.carrinho strong { font: 800 22px var(--titulo); }
+
+/* ---------- Checkout ---------- */
+.checkout { border: 0; border-radius: 26px; padding: 34px 30px 28px; width: min(480px, calc(100% - 24px)); max-height: calc(100% - 24px); margin: auto; color: var(--grafite); background: var(--branco); box-shadow: 0 30px 80px rgba(0, 0, 0, .35); }
+.checkout::backdrop { background: rgba(43, 38, 34, .55); }
+.checkout h2 { font-size: 32px; }
+.checkout__fechar { position: absolute; top: 12px; right: 16px; width: 40px; height: 40px; border: 0; background: var(--areia); border-radius: 50%; font-size: 24px; cursor: pointer; color: var(--grafite); }
+.resumo { list-style: none; border-bottom: 1px solid var(--areia-escura); padding-bottom: 12px; }
+.resumo li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; }
+.resumo__total { display: flex; justify-content: space-between; align-items: center; margin: 12px 0 18px; font-weight: 700; }
+.resumo__total strong { font: 800 26px var(--titulo); color: var(--terracota); }
+.metodos { border: 0; display: grid; gap: 8px; margin-bottom: 14px; }
+.metodos legend { font-weight: 700; margin-bottom: 6px; }
+.metodos label { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border: 2px solid var(--areia-escura); border-radius: 14px; cursor: pointer; }
+.metodos label:has(input:checked) { border-color: var(--terracota); background: var(--terracota-claro); }
+.metodos small { color: var(--cinza); margin-left: auto; }
+.metodos input { accent-color: var(--terracota); width: 18px; height: 18px; }
+.checkout input[type=text] { width: 100%; height: 48px; border: 2px solid var(--areia-escura); border-radius: 14px; padding: 0 14px; font: 400 16px var(--texto); background: var(--areia); }
+.rotulo { display: block; font-weight: 700; font-size: 15px; margin: 6px 0; }
+.checkout .botao { margin-top: 12px; }
+.pix { background: var(--acafrao-claro); border-radius: 14px; padding: 14px; margin: 14px 0; }
+.pix code { display: block; word-break: break-all; font-size: 13px; margin: 6px 0; }
+.qr-grande { width: 240px; height: 240px; margin: 16px auto; border: 4px dashed var(--acafrao); border-radius: 18px; padding: 8px; }
+#passoPronto { text-align: center; }
+
+/* ---------- Abas login/cadastro ---------- */
+.abas { display: grid; grid-template-columns: 1fr 1fr; background: var(--areia); border-radius: 14px; padding: 4px; margin-bottom: 6px; }
+.aba { border: 0; background: none; padding: 10px; border-radius: 10px; font: 700 15px var(--texto); color: var(--cinza); cursor: pointer; }
+.aba.ativa { background: var(--branco); color: var(--terracota); box-shadow: 0 2px 8px rgba(0, 0, 0, .08); }
+
+/* ---------- Informacoes ---------- */
+.info-grade { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+.info-lista { list-style: none; display: grid; gap: 14px; margin-top: 16px; }
+.info-lista li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; background: var(--areia); border-radius: 14px; padding: 14px 18px; }
+.info-lista strong { color: var(--terracota); }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+  .hero__grade, .pedidos-grade, .app-grade, .info-grade { grid-template-columns: 1fr; }
+  .hero__arte { min-height: 260px; order: -1; }
+  .hero__simbolo { width: 230px; }
+  .hero__circulo { width: 270px; }
+  .cartoes-3 { grid-template-columns: 1fr; }
+  .passos { grid-template-columns: 1fr 1fr; }
+  .app-telas { height: 440px; }
+  .app-tela { width: 190px; }
+}
+@media (max-width: 760px) {
+  .menu-botao { display: flex; }
+  .menu { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--areia); border-bottom: 1px solid var(--areia-escura); padding: 8px 20px 20px; display: none; }
+  .menu.aberto { display: flex; }
+  .menu a:not(.botao) { padding: 14px 0; border-bottom: 1px solid var(--areia-escura); }
+  .menu .botao { margin-top: 14px; }
+  .secao { padding: 64px 0; }
+  .passos { grid-template-columns: 1fr; }
+  .hero { padding: 36px 0 56px; border-radius: 0 0 32px 32px; }
+  .rodape__grade { flex-direction: column; text-align: center; }
+  .info-lista li { grid-template-columns: 1fr; gap: 2px; }
+  .checkout { padding: 30px 20px 22px; }
+}

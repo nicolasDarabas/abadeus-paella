@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="margem">20dp</dimen>
+    <dimen name="margem_pequena">12dp</dimen>
+    <dimen name="raio_card">18dp</dimen>
+    <dimen name="raio_botao">14dp</dimen>
+</resources>

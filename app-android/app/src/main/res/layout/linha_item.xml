@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Linha "2x Paella ........ R$ 80,00" usada no carrinho e no detalhe do pedido -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/linhaQtd"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Texto.Subtitulo"
+        android:textColor="@color/terracota"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/linhaNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="@style/Texto.Corpo" />
+
+    <TextView
+        android:id="@+id/linhaValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textAppearance="@style/Texto.Corpo"
+        android:textStyle="bold" />
+</LinearLayout>

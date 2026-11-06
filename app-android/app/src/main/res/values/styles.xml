@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Textos -->
+    <style name="Texto.Base" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textFontWeight">400</item>
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:fontFamily">@font/nunito</item>
+    </style>
+    <style name="Texto.Base.Grande" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textFontWeight">400</item>
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:fontFamily">@font/nunito</item>
+    </style>
+    <style name="Texto.Base.Rotulo" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textFontWeight">700</item>
+        <item name="fontFamily">@font/nunito_bold</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+    </style>
+    <style name="Texto.Marca" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textFontWeight">800</item>
+        <item name="fontFamily">@font/baloo2_extrabold</item>
+        <item name="android:fontFamily">@font/baloo2_extrabold</item>
+        <item name="android:textColor">@color/grafite</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+    <style name="Texto.Titulo" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textFontWeight">700</item>
+        <item name="fontFamily">@font/baloo2_bold</item>
+        <item name="android:fontFamily">@font/baloo2_bold</item>
+        <item name="android:textColor">@color/grafite</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="Texto.Subtitulo" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textFontWeight">700</item>
+        <item name="fontFamily">@font/baloo2_bold</item>
+        <item name="android:fontFamily">@font/baloo2_bold</item>
+        <item name="android:textColor">@color/grafite</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="Texto.Corpo" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textFontWeight">400</item>
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textColor">@color/grafite</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="Texto.Rotulo" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textFontWeight">700</item>
+        <item name="fontFamily">@font/nunito_bold</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="android:textColor">@color/cinza</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="Texto.Preco" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textFontWeight">700</item>
+        <item name="fontFamily">@font/baloo2_bold</item>
+        <item name="android:fontFamily">@font/baloo2_bold</item>
+        <item name="android:textColor">@color/terracota</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="Texto.Numero" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textFontWeight">800</item>
+        <item name="fontFamily">@font/baloo2_extrabold</item>
+        <item name="android:fontFamily">@font/baloo2_extrabold</item>
+        <item name="android:textColor">@color/grafite</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <!-- Etiqueta de status (a cor e definida no codigo) -->
+    <style name="Etiqueta">
+        <item name="android:background">@drawable/bg_selo</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="android:textColor">@color/terracota_escuro</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- Componentes -->
+    <style name="Widget.Abadeus.Botao" parent="Widget.Material3.Button">
+        <item name="android:minHeight">54dp</item>
+        <item name="cornerRadius">@dimen/raio_botao</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/baloo2_bold</item>
+        <item name="android:fontFamily">@font/baloo2_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+    <style name="Widget.Abadeus.Botao.Contorno" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">54dp</item>
+        <item name="cornerRadius">@dimen/raio_botao</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/baloo2_bold</item>
+        <item name="android:fontFamily">@font/baloo2_bold</item>
+        <item name="strokeColor">@color/terracota</item>
+        <item name="android:textColor">@color/terracota</item>
+    </style>
+    <style name="Widget.Abadeus.Botao.Texto" parent="Widget.Material3.Button.TextButton">
+        <item name="fontFamily">@font/nunito_bold</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="android:textColor">@color/oliva</item>
+    </style>
+    <style name="Widget.Abadeus.Botao.Oliva" parent="Widget.Abadeus.Botao">
+        <item name="backgroundTint">@color/oliva</item>
+    </style>
+    <style name="Widget.Abadeus.BotaoIcone" parent="Widget.Material3.Button.IconButton.Filled.Tonal">
+        <item name="backgroundTint">@color/acafrao_claro</item>
+        <item name="iconTint">@color/terracota_escuro</item>
+    </style>
+    <style name="Widget.Abadeus.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/raio_card</item>
+        <item name="cardBackgroundColor">@color/branco</item>
+        <item name="cardElevation">1dp</item>
+    </style>
+    <style name="Widget.Abadeus.Campo" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/raio_botao</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/raio_botao</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/raio_botao</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/raio_botao</item>
+        <item name="boxBackgroundColor">@color/branco</item>
+        <item name="boxStrokeColor">@color/terracota</item>
+        <item name="hintTextColor">@color/terracota</item>
+    </style>
+    <style name="Widget.Abadeus.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/Texto.Subtitulo</item>
+        <item name="android:background">@color/areia</item>
+    </style>
+</resources>

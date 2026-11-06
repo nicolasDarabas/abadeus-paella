@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Paella ABADEUS</string>
+    <string name="slogan">Uma panela, muitas mãos.</string>
+    <string name="subtitulo_marca">Paella Beneficente</string>
+
+    <string name="login_ou_email">Login ou e-mail</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">ENTRAR</string>
+    <string name="registrar">REGISTRAR</string>
+    <string name="configurar_servidor">Configurar servidor</string>
+
+    <string name="nome">Nome completo</string>
+    <string name="email">E-mail</string>
+    <string name="telefone">Telefone (opcional)</string>
+    <string name="criar_conta">CRIAR CONTA</string>
+
+    <string name="menu_cardapio">Cardápio</string>
+    <string name="menu_pedidos">Meus pedidos</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_painel">Painel</string>
+    <string name="menu_todos_pedidos">Pedidos</string>
+    <string name="menu_retirada">Retirada</string>
+
+    <string name="sair">Sair da conta</string>
+    <string name="carregando">Carregando…</string>
+    <string name="sem_conexao">Sem conexão com o servidor. Mostrando dados salvos no aparelho.</string>
+</resources>
